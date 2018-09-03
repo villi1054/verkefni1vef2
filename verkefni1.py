@@ -1,6 +1,9 @@
 from sys import argv
 
 from bottle import *
+bottle.debug(True)
+
+
 
 @route('/')
 def index():
