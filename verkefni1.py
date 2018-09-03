@@ -1,4 +1,6 @@
-from bottle import route, run
+from sys import argv
+
+from bottle import *
 
 @route('/')
 def index():
@@ -26,5 +28,6 @@ def bio():
 def pic():
     return "This is the pictures page"
 
-run()
-run(host='0.0.0.0', port='os.environ.get('PORT'))
+#run()
+
+bottle.run(host='0.0.0.0', port=argv(1))
